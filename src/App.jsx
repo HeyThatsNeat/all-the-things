@@ -4,6 +4,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SillyThings'
 import Landing from './pages/Landing/Landing'
 import AmirsThings from './pages/AmirsThings/AmirsThings'
+import AndrewsThings from './pages/AndrewsThings/AndrewsThings'
 
 const App = () => {
   const bensThings = [
@@ -68,6 +69,14 @@ const App = () => {
       name: "Alhaitham",
       image: "https://imgur.com/enrWJ54",
       attributes: ["awesome", "cool", "impervious"],
+    }
+  ]
+
+  const andrewsThings = [
+    {
+      name: "piano",
+      image: "https://imgs.xkcd.com/comics/piano.png",  
+      attributes: ["efficient", "reusability", "not a taco", "piano"],
     },
   ]
 
@@ -90,6 +99,10 @@ const App = () => {
       <Route
         path="/amirs-things"
         element={<AmirsThings things={amirsThings} />}
+      />
+      <Route 
+        path="/andrews-things"
+        element={<AndrewsThings things={andrewsThings} />}
       />
     </Routes>
   )
