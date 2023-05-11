@@ -3,6 +3,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SillyThings'
 import Landing from './pages/Landing/Landing'
+import AmirsThings from './pages/AmirsThings/AmirsThings'
 
 const App = () => {
   const bensThings = [
@@ -62,6 +63,14 @@ const App = () => {
     },
   ]
 
+  const amirsThings = [
+    {
+      name: "Alhaitham",
+      image: "https://imgur.com/enrWJ54",
+      attributes: ["awesome", "cool", "impervious"],
+    },
+  ]
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -77,6 +86,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/amirs-things"
+        element={<AmirsThings things={amirsThings} />}
       />
     </Routes>
   )
