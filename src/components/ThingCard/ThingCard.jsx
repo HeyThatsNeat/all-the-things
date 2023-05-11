@@ -1,4 +1,5 @@
 import React from 'react';
+import AttributeCard from './AttributeCard';
 
 const ThingCard = ({ thing }) => {
   return (
@@ -7,9 +8,10 @@ const ThingCard = ({ thing }) => {
       <img height='300' src={thing.image} alt=""/>
       <ul>
         {thing.attributes.map((attribute, idx) =>
-          <li key={idx} >{attribute}</li>  
+          <li key={idx} >{<AttributeCard attribute={attribute} />}</li>  
         )}
       </ul>
+      <h3>It's something</h3>
     </>
   );
 }
